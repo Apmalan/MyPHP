@@ -126,6 +126,18 @@
             echo ("I = $i  F = $f <br>");
         }
         ?>
+         <h1>Exemplo do</h1>
+        <?php 
+        $i =0; $f=99;
+        do {
+            $i++;
+            $f--;
+            echo ("I = $i  F = $f <br>");
+        }
+        while ($i <= $f);
+            
+        
+        ?>
 
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
             <div class="row">
