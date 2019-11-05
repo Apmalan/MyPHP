@@ -117,6 +117,15 @@
                 </div>
             </div>
         </div>
+        <h1>Exemplo While</h1>
+        <?php 
+        $i =0; $f=99;
+        while ($i <= $f) {
+            $i++;
+            $f--;
+            echo ("I = $i  F = $f <br>");
+        }
+        ?>
 
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
             <div class="row">
