@@ -4,10 +4,12 @@ $(function () {
     var tipoDocumento = $("#divTipoDocumento");
     var nomeRazaoSocial = $("#divNomeRazaoSocial");
     var nomeFantasia = $("#divNomeFantasia");
+    var nomeTel = $("#divNomeTel");
 
     tipoDocumento.hide();
     nomeRazaoSocial.hide();
     nomeFantasia.hide();
+    nomeTel.hide();
 
     $(document).on('click', 'input[type=radio]', function () {
         var id = $(this).prop('id');
@@ -19,8 +21,9 @@ $(function () {
             case 'pf':
                 $('#divTipoDocumento label').text('CPF');
                 $('#divTipoDocumento label').prop('for', 'cpf');
-                $('#divTipoDocumento label').prop('name', 'cpf')
-                    .prop('id', 'cpf');
+                $('#divTipoDocumento input').prop('name', 'cpf')
+                    .prop('id', 'cpf')
+                    .mask('000.000.000-00');
 
                 tipoDocumento.show();
                 $('#divNomeRazaoSocial label').text('Nome')
@@ -35,8 +38,10 @@ $(function () {
             case 'pj':
                 $('#divTipoDocumento label').text('CNPJ');
                 $('#divTipoDocumento label').prop('for', 'cnpj');
-                $('#divTipoDocumento label').prop('name', 'cnpj')
-                    .prop('id', 'cnpj');
+                $('#divTipoDocumento input').prop('name', 'cnpj')
+                    .prop('id', 'cnpj')
+                    .mask('00.000.000/0000-00');
+
                 tipoDocumento.show();
                 $('#divNomeRazaoSocial label').text('Razão Social');
                 $('#divNomeRazaoSocial label').prop('for', 'razaoSocial');
@@ -49,7 +54,15 @@ $(function () {
                 $('#divNomeFantasia input').prop('name', 'nomeFantasia');
                 $('#divNomeFantasia input').prop('id', 'nomeFantasial');
 
-                nomeFantasia.show();
+                nomeTel.show();
+
+                $('#divNomeTel label').text('Nome Tel');
+                $('#divNomeTel label').prop('for', 'nomeTel');
+                $('#divNomeTel input').prop('name', 'nomeTel');
+                $('#divNomeTel input').prop('id', 'nomeTel');
+
+                nomeTel.show();
+
                 break;
             default:
                 break;

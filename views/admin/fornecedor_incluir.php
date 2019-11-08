@@ -102,7 +102,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label>CEP</label>
-                                                    <input type="text" class="form-control" id="cep">
+                                                    <input type="text" class="form-control cep" id="cep">
                                                 </div>
 
                                             </div>
@@ -116,7 +116,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <div class="col-md-1">
                                                 <div class="form-group">
                                                     <label>Número</label>
-                                                    <input type="text" class="form-control" id="divNumeroResidencia">
+                                                    <input type="text" class="form-control" id="NumeroResidencia" data-mask="s00.0">
                                                 </div>
 
 
@@ -144,7 +144,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 </div>
 
                                             </div>
+                                             <div class="row">
+                                            <div class="col-md-5" >
+                                                <div class="form-group">
+                                                    <label>Bairro</label>
+                                                    <input type="text" class="form-control" id="bairro">
+                                                </div>
+
+                                            </div>
                                         </div>
+                                        
+                                            <div class="col-md-2" >
+                                                <div class="form-group">
+                                                    <label>Telefone</label>
+                                                    <input type="text" class="form-control" id="idTel" data-mask="(00)0000-0000">
+                                                </div>
+
+                                            
+                                        </div>
+                                        
+                                            <div class="col-md-2" >
+                                                <div class="form-group">
+                                                    <label>Cel</label>
+                                                    <input type="text" class="form-control" id="idCel" data-mask="(00)00000-0000">
+                                                </div>
+                                                </div>
+                                            </div>
+                                        
                                     </form>
 
 
@@ -176,6 +202,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <?php require_once("dist/js/javascript.php"); ?>
     <script src="dist/js/pages/fornecedor/fornecedor_incluir.js"></script>
     <script src="dist/js/viacep.js"></script>
+    <script src="dist/js/meuInputMask.js"></script>
+  
     
 </body>
 
